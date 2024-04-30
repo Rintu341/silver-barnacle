@@ -8,7 +8,7 @@ import com.example.mynotes.utils.DateConverter
 import com.example.mynotes.utils.UUIDConverter
 
 @Database(entities = [Note::class], version = 1, exportSchema = false)
-@TypeConverters(DateConverter::class,UUIDConverter::class) // it tells database hoe to convert ony type to another
+@TypeConverters(DateConverter::class,UUIDConverter::class) // it tells database how to convert ony type to another
 abstract class NoteDatabase : RoomDatabase() {
     abstract  fun noteDao() : NoteDatabaseDao
 
